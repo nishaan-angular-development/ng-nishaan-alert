@@ -1,170 +1,167 @@
 {
-  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1,
-  "newProjectRoot": "projects",
-  "projects": {
-    "ng-nishaan-alert": {
-      "root": "projects/ng-nishaan-alert",
-      "sourceRoot": "projects/ng-nishaan-alert/src",
-      "projectType": "library",
-      "prefix": "lib",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
-          "options": {
-            "tsConfig": "projects/ng-nishaan-alert/tsconfig.lib.json",
-            "project": "projects/ng-nishaan-alert/ng-package.json"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/ng-nishaan-alert/src/test.ts",
-            "tsConfig": "projects/ng-nishaan-alert/tsconfig.spec.json",
-            "karmaConfig": "projects/ng-nishaan-alert/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/ng-nishaan-alert/tsconfig.lib.json",
-              "projects/ng-nishaan-alert/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
-    },
-    "ng-nishaan-alert-showcase": {
-      "root": "projects/ng-nishaan-alert-showcase/",
-      "sourceRoot": "projects/ng-nishaan-alert-showcase/src",
-      "projectType": "application",
-      "prefix": "app",
-      "schematics": {},
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:browser",
-          "options": {
-            "outputPath": "dist/ng-nishaan-alert-showcase",
-            "index": "projects/ng-nishaan-alert-showcase/src/index.html",
-            "main": "projects/ng-nishaan-alert-showcase/src/main.ts",
-            "polyfills": "projects/ng-nishaan-alert-showcase/src/polyfills.ts",
-            "tsConfig": "projects/ng-nishaan-alert-showcase/tsconfig.app.json",
-            "assets": [
-              "projects/ng-nishaan-alert-showcase/src/favicon.ico",
-              "projects/ng-nishaan-alert-showcase/src/assets"
-            ],
-            "styles": [
-              "projects/ng-nishaan-alert-showcase/src/styles.css"
-            ],
-            "scripts": []
-          },
-          "configurations": {
-            "production": {
-              "fileReplacements": [
-                {
-                  "replace": "projects/ng-nishaan-alert-showcase/src/environments/environment.ts",
-                  "with": "projects/ng-nishaan-alert-showcase/src/environments/environment.prod.ts"
+    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "version": 1,
+    "newProjectRoot": "projects",
+    "projects": {
+        "ng-nishaan-alert": {
+            "root": "projects/ng-nishaan-alert",
+            "sourceRoot": "projects/ng-nishaan-alert/src",
+            "projectType": "library",
+            "prefix": "lib",
+            "architect": {
+                "build": {
+                    "builder": "@angular-devkit/build-ng-packagr:build",
+                    "options": {
+                        "tsConfig": "projects/ng-nishaan-alert/tsconfig.lib.json",
+                        "project": "projects/ng-nishaan-alert/ng-package.json"
+                    }
+                },
+                "test": {
+                    "builder": "@angular-devkit/build-angular:karma",
+                    "options": {
+                        "main": "projects/ng-nishaan-alert/src/test.ts",
+                        "tsConfig": "projects/ng-nishaan-alert/tsconfig.spec.json",
+                        "karmaConfig": "projects/ng-nishaan-alert/karma.conf.js"
+                    }
+                },
+                "lint": {
+                    "builder": "@angular-devkit/build-angular:tslint",
+                    "options": {
+                        "tsConfig": [
+                            "projects/ng-nishaan-alert/tsconfig.lib.json",
+                            "projects/ng-nishaan-alert/tsconfig.spec.json"
+                        ],
+                        "exclude": [
+                            "**/node_modules/**"
+                        ]
+                    }
                 }
-              ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "extractCss": true,
-              "namedChunks": false,
-              "aot": true,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
+            }
+        },
+        "ng-nishaan-alert-showcase": {
+            "root": "projects/ng-nishaan-alert-showcase/",
+            "sourceRoot": "projects/ng-nishaan-alert-showcase/src",
+            "projectType": "application",
+            "prefix": "app",
+            "schematics": {},
+            "architect": {
+                "build": {
+                    "builder": "@angular-devkit/build-angular:browser",
+                    "options": {
+                        "outputPath": "dist/ng-nishaan-alert-showcase",
+                        "index": "projects/ng-nishaan-alert-showcase/src/index.html",
+                        "main": "projects/ng-nishaan-alert-showcase/src/main.ts",
+                        "polyfills": "projects/ng-nishaan-alert-showcase/src/polyfills.ts",
+                        "tsConfig": "projects/ng-nishaan-alert-showcase/tsconfig.app.json",
+                        "assets": [
+                            "projects/ng-nishaan-alert-showcase/src/favicon.ico",
+                            "projects/ng-nishaan-alert-showcase/src/assets"
+                        ],
+                        "styles": [
+                            "projects/ng-nishaan-alert-showcase/src/styles.css",
+                            "node_modules/bootstrap/dist/css/bootstrap.min.css"
+                        ],
+                        "scripts": []
+                    },
+                    "configurations": {
+                        "production": {
+                            "fileReplacements": [{
+                                "replace": "projects/ng-nishaan-alert-showcase/src/environments/environment.ts",
+                                "with": "projects/ng-nishaan-alert-showcase/src/environments/environment.prod.ts"
+                            }],
+                            "optimization": true,
+                            "outputHashing": "all",
+                            "sourceMap": false,
+                            "extractCss": true,
+                            "namedChunks": false,
+                            "aot": true,
+                            "extractLicenses": true,
+                            "vendorChunk": false,
+                            "buildOptimizer": true,
+                            "budgets": [{
+                                "type": "initial",
+                                "maximumWarning": "2mb",
+                                "maximumError": "5mb"
+                            }]
+                        }
+                    }
+                },
+                "serve": {
+                    "builder": "@angular-devkit/build-angular:dev-server",
+                    "options": {
+                        "browserTarget": "ng-nishaan-alert-showcase:build"
+                    },
+                    "configurations": {
+                        "production": {
+                            "browserTarget": "ng-nishaan-alert-showcase:build:production"
+                        }
+                    }
+                },
+                "extract-i18n": {
+                    "builder": "@angular-devkit/build-angular:extract-i18n",
+                    "options": {
+                        "browserTarget": "ng-nishaan-alert-showcase:build"
+                    }
+                },
+                "test": {
+                    "builder": "@angular-devkit/build-angular:karma",
+                    "options": {
+                        "main": "projects/ng-nishaan-alert-showcase/src/test.ts",
+                        "polyfills": "projects/ng-nishaan-alert-showcase/src/polyfills.ts",
+                        "tsConfig": "projects/ng-nishaan-alert-showcase/tsconfig.spec.json",
+                        "karmaConfig": "projects/ng-nishaan-alert-showcase/karma.conf.js",
+                        "styles": [
+                            "projects/ng-nishaan-alert-showcase/src/styles.css"
+                        ],
+                        "scripts": [],
+                        "assets": [
+                            "projects/ng-nishaan-alert-showcase/src/favicon.ico",
+                            "projects/ng-nishaan-alert-showcase/src/assets"
+                        ]
+                    }
+                },
+                "lint": {
+                    "builder": "@angular-devkit/build-angular:tslint",
+                    "options": {
+                        "tsConfig": [
+                            "projects/ng-nishaan-alert-showcase/tsconfig.app.json",
+                            "projects/ng-nishaan-alert-showcase/tsconfig.spec.json"
+                        ],
+                        "exclude": [
+                            "**/node_modules/**"
+                        ]
+                    }
                 }
-              ]
             }
-          }
         },
-        "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "ng-nishaan-alert-showcase:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "ng-nishaan-alert-showcase:build:production"
+        "ng-nishaan-alert-showcase-e2e": {
+            "root": "projects/ng-nishaan-alert-showcase-e2e/",
+            "projectType": "application",
+            "prefix": "",
+            "architect": {
+                "e2e": {
+                    "builder": "@angular-devkit/build-angular:protractor",
+                    "options": {
+                        "protractorConfig": "projects/ng-nishaan-alert-showcase-e2e/protractor.conf.js",
+                        "devServerTarget": "ng-nishaan-alert-showcase:serve"
+                    },
+                    "configurations": {
+                        "production": {
+                            "devServerTarget": "ng-nishaan-alert-showcase:serve:production"
+                        }
+                    }
+                },
+                "lint": {
+                    "builder": "@angular-devkit/build-angular:tslint",
+                    "options": {
+                        "tsConfig": "projects/ng-nishaan-alert-showcase-e2e/tsconfig.e2e.json",
+                        "exclude": [
+                            "**/node_modules/**"
+                        ]
+                    }
+                }
             }
-          }
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "ng-nishaan-alert-showcase:build"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/ng-nishaan-alert-showcase/src/test.ts",
-            "polyfills": "projects/ng-nishaan-alert-showcase/src/polyfills.ts",
-            "tsConfig": "projects/ng-nishaan-alert-showcase/tsconfig.spec.json",
-            "karmaConfig": "projects/ng-nishaan-alert-showcase/karma.conf.js",
-            "styles": [
-              "projects/ng-nishaan-alert-showcase/src/styles.css"
-            ],
-            "scripts": [],
-            "assets": [
-              "projects/ng-nishaan-alert-showcase/src/favicon.ico",
-              "projects/ng-nishaan-alert-showcase/src/assets"
-            ]
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/ng-nishaan-alert-showcase/tsconfig.app.json",
-              "projects/ng-nishaan-alert-showcase/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
         }
-      }
     },
-    "ng-nishaan-alert-showcase-e2e": {
-      "root": "projects/ng-nishaan-alert-showcase-e2e/",
-      "projectType": "application",
-      "prefix": "",
-      "architect": {
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "projects/ng-nishaan-alert-showcase-e2e/protractor.conf.js",
-            "devServerTarget": "ng-nishaan-alert-showcase:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "ng-nishaan-alert-showcase:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": "projects/ng-nishaan-alert-showcase-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
-    }
-  },
-  "defaultProject": "ng-nishaan-alert"
+    "defaultProject": "ng-nishaan-alert"
 }
