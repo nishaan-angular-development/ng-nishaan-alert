@@ -1,2 +1,2 @@
-# ng-nishaan-alert-lb
+# ng-nishaan-alert
 Nishaan alert library
