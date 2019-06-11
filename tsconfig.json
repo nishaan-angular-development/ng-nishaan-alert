@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ng-nishaan-alert": [
+        "dist/ng-nishaan-alert"
+      ],
+      "ng-nishaan-alert/*": [
+        "dist/ng-nishaan-alert/*"
+      ]
+    }
   }
 }
